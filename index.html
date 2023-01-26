@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>cigognepolonais</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="left">
+        <div class="navbar-header">Aesthia</div>
+        <a href="#home">Home</a>
+        <a onclick="writeAboutMe()" href="#about-me">About me</a>
+        <a href="#portfolio">Portfolio</a>
+      </div>
+      <div class="right">
+        <a href="#contact-me">Contact</a>
+        <i onclick="OpenInNewTabWinBrowser('https://github.com/everyonehateskanashii')" class="fa-brands fa-square-github"></i>
+        <i onclick="navigateToOtherSite('https://twitter.com/cigognepolonais')" class="fa-brands fa-square-facebook"></i>
+        <i onclick="navigateToOtherSite('https://twitter.com/cigognepolonais')" class="fa-brands fa-square-twitter"></i>
+      </div>
+    </div>
+    <div class="home" id="home">
+      <div class="main-text">
+        <div class="main-header">Yo, i'm <b>cigognepolonais</b></div>
+        <div class="main-subhead">Programmer</div>
+        <div class="main-desc">
+          I am a programmer who will make his dreams come true...
+        </div>
+        <button class="contact-me">
+          <p>Contact Me<i class="fa-solid fa-paper-plane"></i></p>
+        </button>
+      </div>
+      <img src="files/logo.png" alt="" />
+    </div>
+    <div class="about-me" id="about-me">
+      <h2>About Me</h2>
+      <button class="write-about-me" onclick="writeAboutMe()">
+        <p>Write About Me<i class="fa-solid fa-feather-pointed"></i></p>
+      </button>
+      <p id="about-me-text"></p>
+      <p id="more-about-me-text"></p>
+    </div>
+    <div id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="project-container">
+        <div class="project" id="project">
+          <img
+            src="https://scontent.xx.fbcdn.net/v/t1.15752-9/324358117_859343925296881_222898334943765774_n.png?stp=dst-png_s417x417&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ZQXGe-2pr_QAX8Ty3SL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRe60GcNOB8HC2uOxMfLdBv_MwJsHQm5wKdcuqou-tBlQ&oe=63F6D72C"
+            alt="Project 1"
+          />
+          <h3>Project 1</h3>
+          <p>Project 1 Description</p>
+        </div>
+        <div class="project" id="project">
+          <img
+            src="https://scontent.xx.fbcdn.net/v/t1.15752-9/324358117_859343925296881_222898334943765774_n.png?stp=dst-png_s417x417&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ZQXGe-2pr_QAX8Ty3SL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRe60GcNOB8HC2uOxMfLdBv_MwJsHQm5wKdcuqou-tBlQ&oe=63F6D72C"
+            alt="Project 2"
+          />
+          <h3>Project 2</h3>
+          <p>Project 2 Description</p>
+        </div>
+        <div class="project" id="project">
+          <img
+            src="https://scontent.xx.fbcdn.net/v/t1.15752-9/324358117_859343925296881_222898334943765774_n.png?stp=dst-png_s417x417&_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=ZQXGe-2pr_QAX8Ty3SL&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdRe60GcNOB8HC2uOxMfLdBv_MwJsHQm5wKdcuqou-tBlQ&oe=63F6D72C"
+            alt="Project 3"
+          />
+          <h3>Project 3</h3>
+          <p>Project 3 Description</p>
+        </div>
+        
+      </div>
+    </div>
+    <div id="contact-me">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name"><i class="fa-solid fa-user"></i>Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" />
+        <br />
+        <label for="email"><i class="fa-solid fa-at"></i>Email:</label>
+        <input type="text" id="email" name="email" placeholder="Your Email" />
+        <br />
+        <label for="message"><i class="fa-solid fa-message"></i>Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+        ></textarea>
+        <br/>
+        <p id="error"></p>
+        <button type="submit">
+          <p>Submit <i class="fa-solid fa-envelope"></i></p>
+        </button>
+      </form>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2023 Aesthia</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
